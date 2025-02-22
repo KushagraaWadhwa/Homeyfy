@@ -49,28 +49,4 @@ Homeyfy is a web-based multi-user application designed to streamline household s
 ## Demo
 [Watch the presentation video](https://drive.google.com/file/d/1B8M62IEN44I0p9CK1iU0echyviY1qu-q/view?usp=sharing)
 
-## Installation
-1. Clone the repository:
-   ```sh
-   git clone https://github.com/your-username/homeyfy.git
-   cd homeyfy
-   ```
-2. Create a virtual environment and install dependencies:
-   ```sh
-   python -m venv venv
-   source venv/bin/activate  # On Windows use `venv\Scripts\activate`
-   pip install -r requirements.txt
-   ```
-3. Set up environment variables and run the Flask server:
-   ```sh
-   export FLASK_APP=app.py
-   flask run
-   ```
-4. Start Redis and Celery for background tasks:
-   ```sh
-   redis-server &
-   celery -A app.celery worker --loglevel=info
-   ```
-
-
-
+ 
