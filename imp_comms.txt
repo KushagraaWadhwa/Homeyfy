@@ -1,0 +1,28 @@
+//redis
+sudo apt update
+sudo apt install redis-server
+//celery
+sudo apt install celery
+//Mailhog
+sudo apt-get -y install golang-go
+go install github.com/mailhog/MailHog@latest
+
+
+
+
+
+celery -A app:celery_app worker -l INFO         // To run celery taks
+celery -A app:celery_app beat -l INFO          // to run the celery_schedules
+sudo service redis-server start                // To start the redis server
+redis-cli ping                                 // To check if the redis server is active
+
+
+//Installation of MailHog
+sudo apt-get -y install golang-go
+go install github.com/mailhog/MailHog@latest
+
+ ~/go/bin/MailHog                              // To run the MailHog system 
+
+
+//Order of commands
+Flask -> MailHog -> Celery worker -> Celery beat
